@@ -7,6 +7,8 @@ The same pattern appears across scales: **spectra, galaxies, planetary systems, 
 
 ---
 
+boundary_ratios.csv
+---
 ## 1. Overview
 
 Instead of orbitals, shells or classical atomic rules, the model treats elements as **positions on a continuous geometric path** with:
