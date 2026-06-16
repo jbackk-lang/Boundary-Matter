@@ -94,6 +94,68 @@ Sprawdzić, czy multilayer Co/Cu o stosunku 27:63 wykazuje podharmoniczne oscyla
 - FMR/ESR  
 - szukanie odpowiedzi 2T, 3T, … przy napędzie T
 
+## Boundary‑Ratio Formula (Mathematical Core)
+
+Model Boundary‑Matter opiera się na jednym fundamentalnym wzorze, który określa
+wartości brzegowe stabilności między kolejnymi domenami skrętu:
+
+
+
+\[
+R_n = \frac{n^3}{(n+1)^3 - 1}
+\]
+
+
+
+To jest dokładnie ten sam wzór używany w `math_validator.py`.
+
+### Przykładowe wartości:
+- \( R_2 = \frac{8}{26} \)
+- \( R_3 = \frac{27}{63} \)
+- \( R_4 = \frac{64}{124} \)
+- \( R_5 = \frac{125}{215} \)
+
+### Zastosowanie do materiałów (np. Co/Cu)
+Jeśli próbka składa się z dwóch materiałów A/B, to ich proporcje objętościowe lub grubościowe powinny spełniać:
+
+
+
+\[
+\frac{V_A}{V_B} \approx R_n
+\]
+
+
+
+Dla Co/Cu przy \( n = 3 \):
+
+
+
+\[
+\frac{t_{\text{Co}}}{t_{\text{Cu}}} \approx \frac{27}{63}
+\]
+
+
+
+### Defekt i czas życia
+W modelu Λ–τ–ρ stabilność jest odwrotnie proporcjonalna do defektu:
+
+
+
+\[
+\text{lifetime} \sim \frac{1}{\rho}
+\]
+
+
+
+a defekt \( \rho \) jest minimalny dokładnie na wartościach brzegowych \( R_n \).
+
+Dlatego materia o proporcjach zbliżonych do \( R_n \) wykazuje:
+- minimalne straty,
+- maksymalną stabilność skrętu,
+- długowieczne oscylacje (spinowe, rezonansowe, THz),
+- zachowania quasi‑czas‑krystaliczne.
+
+
 **Hipoteza Boundary‑Matter:**  
 Na stosunku 27/63 defekt ρ jest minimalny → czas życia stanów cyklicznych jest maksymalny dla tego materiału.
 
