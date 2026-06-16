@@ -116,7 +116,7 @@ To jest topologiczny odpowiednik Vantablack, ale dla fal kwantowych.
 
 Wizualizacja topologicznego pochłaniania fal w układach Λ–τ–ρ:
 
-![Super‑Black Matter](diagrams/super_black_matter.png)
+![Super‑Black Matter](/super_black_matter.png)
 ---
 
 ## 5. Rezonans w metalurgii (real‑world analogy)
