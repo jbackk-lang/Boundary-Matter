@@ -177,3 +177,30 @@ long‑range coherence,
 and Möbius‑like continuity.
 
 This suggests that stability in matter is not purely chemical, but topological, governed by discrete twist boundaries that repeat across scales — consistent with the structural model described in this repository.
+
+## Boundary Ratio Table
+
+Wizualizacja stosunków brzegowych w naszym układzie Λ–τ–ρ:
+
+
+
+\[
+\frac{2^3}{3^3 - 1} \rightarrow \frac{3^3}{4^3 - 1} \rightarrow \frac{4^3}{5^3 - 1} \rightarrow \frac{5^3}{6^3 - 1}
+\]
+
+
+
+[![Boundary Ratio Table](https://raw.githubusercontent.com/jbackk-lang/Boundary-Matter/main/diagrams/boundary_ratio_table.png)](https://raw.githubusercontent.com/jbackk-lang/Boundary-Matter/main/diagrams/## Boundary Ratio Table
+
+Wizualizacja stosunków brzegowych w naszym układzie Λ–τ–ρ:
+
+
+
+\[
+\frac{2^3}{3^3 - 1} \rightarrow \frac{3^3}{4^3 - 1} \rightarrow \frac{4^3}{5^3 - 1} \rightarrow \frac{5^3}{6^3 - 1}
+\]
+
+
+
+[![Boundary Ratio Table](https://raw.githubusercontent.com/jbackk-lang/Boundary-Matter/main/diagrams/boundary_ratio_table.png)](https://raw.githubusercontent.com/jbackk-lang/Boundary-Matter/main/diagrams/boundary_ratio_table.png)
+)
