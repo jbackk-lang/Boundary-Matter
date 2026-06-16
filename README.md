@@ -148,6 +148,7 @@ Podwójny przetop nie tworzy skrętu Möbiusa sam z siebie, ale redukuje defekt
 
 ![Boundary Ratio Table](/boundary_ratio_table.png)
 
+
 ---
 
 ## 8. License
