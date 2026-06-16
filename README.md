@@ -109,6 +109,9 @@ Procesy hutnicze zawierają ukryte rezonanse:
 
 To naturalne środowiska skrętu τ i defektu ρ — dlatego materia krystalizuje w dyskretnych domenach.
 
+Podwójny przetop nie tworzy skrętu Möbiusa sam z siebie, ale redukuje defekt 
+𝜌
+, dzięki czemu topologiczny skręt (pojedynczy lub podwójny) może się ustabilizować w realnym materiale.
 ---
 
 ## 6. Boundary‑Matter Summary
