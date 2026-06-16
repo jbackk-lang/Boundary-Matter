@@ -202,6 +202,4 @@ Wizualizacja stosunków brzegowych w naszym układzie Λ–τ–ρ:
 
 
 
-[![Boundary Ratio Table](https://raw.githubusercontent.com/jbackk-lang/Boundary-Matter/main/boundary_ratio_table.png)](https://raw.githubusercontent.com/jbackk-lang/Boundary-Matter/main/boundary_ratio_table.png)
-)
 
