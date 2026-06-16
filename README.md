@@ -97,6 +97,26 @@ Sprawdzić, czy multilayer Co/Cu o stosunku 27:63 wykazuje podharmoniczne oscyla
 **Hipoteza Boundary‑Matter:**  
 Na stosunku 27/63 defekt ρ jest minimalny → czas życia stanów cyklicznych jest maksymalny dla tego materiału.
 
+## Super‑Black Matter
+
+W modelu Λ–τ–ρ „czarność” nie oznacza koloru, lecz **topologiczne pochłanianie**: fala (światło, spin, THz) nie ma dostępnej drogi powrotu, ponieważ defekt \( \rho \) jest minimalny na wartościach brzegowych.
+
+Każdy z naszych układów jest „super‑czarny”, ale dla innego rodzaju fali:
+
+| Ratio | Elements | Super‑black for | Physical parameter | Why |
+|-------|----------|-----------------|--------------------|-----|
+| **8/26** | O / Fe (YIG) | spin waves | ultra‑low damping α | ferrimagnetic resonance traps magnons |
+| **27/63** | Co / Cu | spin‑current / GMR | strong spin–orbit + spin damping | multilayers absorb spin like CNT absorb light |
+| **64/124** | Zn / Sb | THz / Dirac surface states | topological surface conduction | no back‑scattering → pure absorption |
+| **125/215** | Te / Po | spin polarization | extreme SO‑coupling | spin twist blocks reflection |
+
+**Interpretacja:**  
+Super‑czarne materiały to układy, w których skręt jest tak bliski wartości brzegowej, że fala (spinowa, THz, powierzchniowa) nie może się odbić — zostaje całkowicie pochłonięta.  
+To jest topologiczny odpowiednik Vantablack, ale dla fal kwantowych.
+
+Wizualizacja topologicznego pochłaniania fal w układach Λ–τ–ρ:
+
+![Super‑Black Matter](diagrams/super_black_matter.png)
 ---
 
 ## 5. Rezonans w metalurgii (real‑world analogy)
