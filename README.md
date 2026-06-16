@@ -1,20 +1,28 @@
-# Boundary‑Matter  
-### Geometry • Twist • Stability
+# Boundary‑Matter — Conceptual Framework for Topological Stability
 
-Materia nie jest zbiorem pierwiastków.  
-Materia jest **strukturą skrętu**, a jej stabilność wynika z **wartości brzegowych** między kolejnymi domenami geometrycznymi.
+**Boundary‑Matter** to część szerszego modelu Λ–τ–ρ,  
+który traktuje materię nie jako zbiór pierwiastków, lecz jako **strukturę skrętu**  
+i **relacje między domenami geometrycznymi**.
 
-Ten projekt dokumentuje model Λ–τ–ρ oraz jego zastosowanie do realnych materiałów.
+To **nie jest teoria fizyczna**,  
+**nie jest modelem empirycznym**,  
+ale **koncepcyjną mapą**, która pozwala patrzeć na stabilność materiałów  
+przez pryzmat topologii, rezonansu i wartości brzegowych.
 
 ---
 
-## 1. Model Λ–τ–ρ
+## 1. Model Λ–τ–ρ (struktura • transformacja • defekt)
 
-- **Λ — struktura** (geometryczny układ skrętu)  
-- **τ — transformacja** (zmiana skrętu, rezonans, przejście domeny)  
-- **ρ — defekt** (odchylenie od idealnego skrętu)
+- **Λ — struktura**  
+  geometryczny układ skrętu, sposób ułożenia domen
 
-Stabilność materii jest odwrotnie proporcjonalna do defektu:
+- **τ — transformacja**  
+  zmiana skrętu, przejście między domenami, rezonans
+
+- **ρ — defekt**  
+  odchylenie od idealnego skrętu, miara niestabilności
+
+W tym ujęciu stabilność jest **odwrotnie proporcjonalna do defektu**:
 
 
 
@@ -24,80 +32,14 @@ Stabilność materii jest odwrotnie proporcjonalna do defektu:
 
 
 
-Minimalne ρ pojawia się na **wartościach brzegowych**:
-
-
-
-\[
-\frac{n^3}{(n+1)^3 - 1}
-\]
-
-
+Minimalny defekt pojawia się na **wartościach brzegowych** —  
+dyskretnej sekwencji proporcji między kolejnymi domenami.
 
 ---
 
-## 2. Boundary Ratios
+## 2. Boundary Ratios (wartości brzegowe)
 
-Te dyskretne proporcje pojawiają się w realnych materiałach:
-
-| Ratio | Interpretation | Candidate Elements | Notes |
-|------|----------------|-------------------|-------|
-| 8 / 26 | \(2^3 / (3^3 - 1)\) | O / Fe | YIG, ferrimagnetic time crystal |
-| 27 / 63 | \(3^3 / (4^3 - 1)\) | Co / Cu | topological metals |
-| 64 / 124 | \(4^3 / (5^3 - 1)\) | Zn / Sb | topological insulators |
-| 125 / 215 | \(5^3 / (6^3 - 1)\) | Te / Po | strong spin–orbit coupling |
-
-Każdy z tych układów wykazuje **anomalia stabilności**, rezonanse spinowe lub zachowania topologiczne.
-
----
-
-## 3. Why these ratios are not coincidences
-
-Różne klasy materiałów — ferrimagnety, metale, izolatory topologiczne, układy spin–orbita — trafiają w te same proporcje.
-
-To nie jest przypadek.  
-To jest **ciągłość skrętu** między kolejnymi domenami:
-
-
-
-\[
-2^3 \rightarrow 3^3 \rightarrow 4^3 \rightarrow 5^3
-\]
-
-
-
-Każda domena ma swoją wartość brzegową, a materia „wybiera” te punkty, bo minimalizują defekt ρ.
-
----
-
-## 4. Experimental Sketch: Co/Cu (27/63)
-
-Proponowany eksperyment testujący stabilność cyklicznych stanów spinowych.
-
-**Cel:**  
-Sprawdzić, czy multilayer Co/Cu o stosunku 27:63 wykazuje podharmoniczne oscylacje (czas‑krystaliczne) pod okresowym napędem.
-
-**Układ:**
-
-- Co(t₁) / Cu(t₂) powtarzane N razy  
-- grubości dobrane tak, by Co:Cu ≈ 27:63  
-- podłoże: Si/SiO₂
-
-**Pobudzenie:**
-
-- pole statyczne \(B_0\)  
-- napęd mikrofalowy (GHz) o okresie T  
-
-**Pomiary:**
-
-- GMR w funkcji czasu  
-- FMR/ESR  
-- szukanie odpowiedzi 2T, 3T, … przy napędzie T
-
-## Boundary‑Ratio Formula (Mathematical Core)
-
-Model Boundary‑Matter opiera się na jednym fundamentalnym wzorze, który określa
-wartości brzegowe stabilności między kolejnymi domenami skrętu:
+Model wykorzystuje prosty wzór:
 
 
 
@@ -107,125 +49,14 @@ R_n = \frac{n^3}{(n+1)^3 - 1}
 
 
 
-To jest dokładnie ten sam wzór używany w `math_validator.py`.
+To **koncepcyjna struktura**, nie prawo fizyczne.  
+Służy do opisu **ciągłości skrętu** między domenami.
 
-### Przykładowe wartości:
-- \( R_2 = \frac{8}{26} \)
-- \( R_3 = \frac{27}{63} \)
-- \( R_4 = \frac{64}{124} \)
-- \( R_5 = \frac{125}{215} \)
+Przykładowe wartości:
 
-### Zastosowanie do materiałów (np. Co/Cu)
-Jeśli próbka składa się z dwóch materiałów A/B, to ich proporcje objętościowe lub grubościowe powinny spełniać:
+- **8/26** — O / Fe  
+- **27/63** — Co / Cu  
+- **64/124** — Zn / Sb  
+- **125/215** — Te / Po  
 
-
-
-\[
-\frac{V_A}{V_B} \approx R_n
-\]
-
-
-
-Dla Co/Cu przy \( n = 3 \):
-
-
-
-\[
-\frac{t_{\text{Co}}}{t_{\text{Cu}}} \approx \frac{27}{63}
-\]
-
-
-
-### Defekt i czas życia
-W modelu Λ–τ–ρ stabilność jest odwrotnie proporcjonalna do defektu:
-
-
-
-\[
-\text{lifetime} \sim \frac{1}{\rho}
-\]
-
-
-
-a defekt \( \rho \) jest minimalny dokładnie na wartościach brzegowych \( R_n \).
-
-Dlatego materia o proporcjach zbliżonych do \( R_n \) wykazuje:
-- minimalne straty,
-- maksymalną stabilność skrętu,
-- długowieczne oscylacje (spinowe, rezonansowe, THz),
-- zachowania quasi‑czas‑krystaliczne.
-
-
-**Hipoteza Boundary‑Matter:**  
-Na stosunku 27/63 defekt ρ jest minimalny → czas życia stanów cyklicznych jest maksymalny dla tego materiału.
-
-## Preferred Geometry for Boundary‑Matter Samples
-
-Aby zminimalizować defekt \( \rho \) i zmaksymalizować czas życia stanów spinowych, próbka Co/Cu (27/63) powinna mieć kształt zamknięty i gładki. Najlepsze geometrie:
-
-1. **Torus (3D ring)** – idealny akumulator spinów, minimalne straty, pełna cykliczność.
-2. **Möbius strip** – topologicznie najczystsza forma skrętu 4π.
-3. **2D ring (annulus)** – praktyczny i bardzo skuteczny kompromis.
-4. **Disk** – dobra symetria, ale brak pełnej pętli.
-5. **Rectangular film** – największe straty, ostre krawędzie, brak cykliczności.
-
-Rekomendowana geometria eksperymentalna: **pierścień Co/Cu**, który łączy wykonalność technologiczną z topologiczną stabilnością skrętu.
-
-
-## Super‑Black Matter
-
-W modelu Λ–τ–ρ „czarność” nie oznacza koloru, lecz **topologiczne pochłanianie**: fala (światło, spin, THz) nie ma dostępnej drogi powrotu, ponieważ defekt \( \rho \) jest minimalny na wartościach brzegowych.
-
-Każdy z naszych układów jest „super‑czarny”, ale dla innego rodzaju fali:
-
-| Ratio | Elements | Super‑black for | Physical parameter | Why |
-|-------|----------|-----------------|--------------------|-----|
-| **8/26** | O / Fe (YIG) | spin waves | ultra‑low damping α | ferrimagnetic resonance traps magnons |
-| **27/63** | Co / Cu | spin‑current / GMR | strong spin–orbit + spin damping | multilayers absorb spin like CNT absorb light |
-| **64/124** | Zn / Sb | THz / Dirac surface states | topological surface conduction | no back‑scattering → pure absorption |
-| **125/215** | Te / Po | spin polarization | extreme SO‑coupling | spin twist blocks reflection |
-
-**Interpretacja:**  
-Super‑czarne materiały to układy, w których skręt jest tak bliski wartości brzegowej, że fala (spinowa, THz, powierzchniowa) nie może się odbić — zostaje całkowicie pochłonięta.  
-To jest topologiczny odpowiednik Vantablack, ale dla fal kwantowych.
-
-Wizualizacja topologicznego pochłaniania fal w układach Λ–τ–ρ:
-
-![Super‑Black Matter](/super_black_matter.png)
----
-
-## 5. Rezonans w metalurgii (real‑world analogy)
-
-Procesy hutnicze zawierają ukryte rezonanse:
-
-- **elektromagnetyczne** (piece indukcyjne),  
-- **akustyczne** (pulsacje komory),  
-- **hydrodynamiczne** (fale ciekłego metalu).
-
-To naturalne środowiska skrętu τ i defektu ρ — dlatego materia krystalizuje w dyskretnych domenach.
-
-Podwójny przetop nie tworzy skrętu Möbiusa sam z siebie, ale redukuje defekt 
-𝜌
-, dzięki czemu topologiczny skręt (pojedynczy lub podwójny) może się ustabilizować w realnym materiale.
----
-
-## 6. Boundary‑Matter Summary
-
-- materia = skręt, nie chemia  
-- stabilność = minimalny defekt ρ  
-- defekt minimalny na wartościach brzegowych  
-- te wartości pojawiają się w realnych materiałach  
-- można je testować eksperymentalnie (Co/Cu, Zn/Sb, YIG)
-
----
-
-## 7. Diagram
-
-![Boundary Ratio Table](/boundary_ratio_table.png)
-
-
----
-
-## 8. License
-
-MIT
+W rzeczywistych materiałach te proporcje
