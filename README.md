@@ -123,7 +123,7 @@ To naturalne środowiska skrętu τ i defektu ρ — dlatego materia krystalizuj
 
 ## 7. Diagram
 
-![Boundary Ratio Table](diagrams/boundary_ratio_table.png)
+![Boundary Ratio Table](/boundary_ratio_table.png)
 
 ---
 
