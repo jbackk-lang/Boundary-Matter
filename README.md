@@ -127,3 +127,43 @@ This project maps that **deeper structural rule**.
 ## 9. License
 
 MIT License.
+10. Boundary Ratios (8/26 → 27/63 → 64/124)
+(structural resonance conditions)
+
+The same geometric rule that organizes the 3×9 Möbius sequence also appears in real materials.
+Some crystals exhibit exceptionally stable cyclic behavior because their internal structure sits exactly on a boundary ratio between two nearly‑complete twist states.
+
+Example:
+In ferrimagnetic garnets (YIG), the dominant atomic numbers are:
+
+O = 8
+
+Fe = 26
+
+This forms the ratio:
+
+8 / 26 ≈ (2³) / (3³ − 1)  
+a boundary between a complete binary twist (8) and an almost‑complete ternary twist (27).
+
+This boundary condition minimizes the structural defect ρ and allows long‑lived cyclic states (time‑crystal‑like behavior).
+
+From this, the next natural boundary ratios follow the same pattern:
+
+27 / 63 ≈ (3³) / (4³ − 1)
+
+64 / 124 ≈ (4³) / (5³ − 1)
+
+125 / 215 ≈ (5³) / (6³ − 1)
+
+These ratios mark transitions between successive twist domains.
+Materials whose dominant atomic numbers cluster around these values tend to support:
+
+stable phase cycles,
+
+low‑defect structural behavior,
+
+long‑range coherence,
+
+and Möbius‑like continuity.
+
+This suggests that stability in matter is not purely chemical, but topological, governed by discrete twist boundaries that repeat across scales — consistent with the structural model described in this repository.
