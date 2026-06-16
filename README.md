@@ -97,6 +97,19 @@ Sprawdzić, czy multilayer Co/Cu o stosunku 27:63 wykazuje podharmoniczne oscyla
 **Hipoteza Boundary‑Matter:**  
 Na stosunku 27/63 defekt ρ jest minimalny → czas życia stanów cyklicznych jest maksymalny dla tego materiału.
 
+## Preferred Geometry for Boundary‑Matter Samples
+
+Aby zminimalizować defekt \( \rho \) i zmaksymalizować czas życia stanów spinowych, próbka Co/Cu (27/63) powinna mieć kształt zamknięty i gładki. Najlepsze geometrie:
+
+1. **Torus (3D ring)** – idealny akumulator spinów, minimalne straty, pełna cykliczność.
+2. **Möbius strip** – topologicznie najczystsza forma skrętu 4π.
+3. **2D ring (annulus)** – praktyczny i bardzo skuteczny kompromis.
+4. **Disk** – dobra symetria, ale brak pełnej pętli.
+5. **Rectangular film** – największe straty, ostre krawędzie, brak cykliczności.
+
+Rekomendowana geometria eksperymentalna: **pierścień Co/Cu**, który łączy wykonalność technologiczną z topologiczną stabilnością skrętu.
+
+
 ## Super‑Black Matter
 
 W modelu Λ–τ–ρ „czarność” nie oznacza koloru, lecz **topologiczne pochłanianie**: fala (światło, spin, THz) nie ma dostępnej drogi powrotu, ponieważ defekt \( \rho \) jest minimalny na wartościach brzegowych.
