@@ -216,6 +216,9 @@ We propose a simple boundary‑matter experiment based on a Co/Cu multilayer tun
 **Goal:**  
 Test whether a Co/Cu system with an effective Co:Cu volume ratio close to 27:63 supports unusually stable cyclic spin states and anomalous magnetotransport under periodic driving.
 
+At a boundary ratio (e.g. 27/63), the structural defect 
+𝜌
+ is minimized, so the lifetime of cyclic states is maximized for a given material — not infinite, but anomalously long compared to generic compositions
 **System:**
 
 - Co/Cu multilayer on Si/SiO₂,
