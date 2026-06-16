@@ -6,8 +6,16 @@ This project proposes a structural model of matter where **elements are not chem
 The same pattern appears across scales: **spectra, galaxies, planetary systems, and elements**.
 
 ---
+### Boundary Ratios (CSV)
 
-boundary_ratios.csv
+```csv
+ratio_numerator,ratio_denominator,interpretation,candidate_elements,notes
+8,26,"2^3 / (3^3 - 1)","O / Fe","YIG, ferrimagnetic time-crystal"
+27,63,"3^3 / (4^3 - 1)","Co / Cu","topological metals"
+64,124,"4^3 / (5^3 - 1)","Zn / Sb","topological insulators"
+125,215,"5^3 / (6^3 - 1)","Te / Po","strong spin-orbit coupling"
+```
+
 ---
 ## 1. Overview
 
