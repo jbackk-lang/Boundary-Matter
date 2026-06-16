@@ -1,4 +1,4 @@
-# We‑Are‑Building‑Particles  
+# Boundary‑Matter  
 ### A structural model of matter based on a triple‑twisted Möbius topology  
 ### (not chemistry — geometry)
 
