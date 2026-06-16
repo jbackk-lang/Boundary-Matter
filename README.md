@@ -201,6 +201,91 @@ Wizualizacja stosunków brzegowych w naszym układzie Λ–τ–ρ:
 \frac{2^3}{3^3 - 1} \rightarrow \frac{3^3}{4^3 - 1} \rightarrow \frac{4^3}{5^3 - 1} \rightarrow \frac{5^3}{6^3 - 1}
 \]
 
+## Experimental sketch: Co/Cu boundary ratio 27/63
+
+We propose a simple boundary‑matter experiment based on a Co/Cu multilayer tuned to the ratio
 
 
 
+\[
+\frac{3^3}{4^3 - 1} = \frac{27}{63}.
+\]
+
+
+
+**Goal:**  
+Test whether a Co/Cu system with an effective Co:Cu volume ratio close to 27:63 supports unusually stable cyclic spin states and anomalous magnetotransport under periodic driving.
+
+**System:**
+
+- Co/Cu multilayer on Si/SiO₂,
+- repeated Co(t₁) / Cu(t₂) bilayers,
+- thicknesses chosen so that the effective Co:Cu ratio ≈ 27:63.
+
+**Driving:**
+
+- static magnetic field \( B_0 \),
+- additional periodic drive (AC field or microwave excitation),
+- driving frequency \( f \) in the GHz range.
+
+**Measurements:**
+
+- time‑resolved resistance / GMR under periodic driving,
+- ferromagnetic resonance (FMR/ESR) if available,
+- search for subharmonic response (2T, 3T, …) to a drive with period T.
+
+**Boundary‑Matter hypothesis:**  
+The 27/63 ratio corresponds to a boundary between the \(3^3\) and \(4^3\) twist domains.  
+At this boundary, the structural defect \( \rho \) is minimized, so the system is expected to support long‑lived cyclic spin configurations and time‑crystal‑like behavior under suitable driving.
+
+
+---
+szkic
+
+Szkic eksperymentu „Boundary‑Matter: Co/Cu 27/63”
+Cel:  
+Sprawdzić, czy układ Co/Cu o stosunku zbliżonym do 
+3 3 4 3 − 1 = 27 63
+ wykazuje:
+
+stabilne, cykliczne stany spinowe (quasi‑kryształ czasu),
+
+anomalne zachowanie przewodnictwa / GMR przy okresowym pobudzeniu.
+
+Układ:
+
+wielowarstwowa struktura Co/Cu na podłożu (np. Si/SiO₂),
+
+grubości dobrane tak, by efektywny udział Co:Cu w objętości był bliski 27:63,
+
+geometria: Co( t₁ ) / Cu( t₂ ) powtarzana N razy (superkratka).
+
+Pobudzenie:
+
+zewnętrzne pole magnetyczne stałe 
+𝐵0,
+
+nałożone pole zmienne 
+𝐵(𝑡)
+ lub napęd mikrofalowy (GHz),
+
+okresowy napęd o częstotliwości 
+𝑓.
+
+Pomiary:
+
+opór elektryczny / GMR w funkcji czasu i częstotliwości napędu,
+
+ewentualnie rezonans spinowy (FMR / ESR),
+
+szukanie podharmonicznych odpowiedzi (sygnał o okresie 2T, 3T, … przy napędzie o okresie T) – sygnatura zachowania typu „kryształ czasu”.
+
+Hipoteza wg Boundary‑Matter:
+
+stosunek 27/63 odpowiada przejściu między domenami 
+3 3 i 4 3
+,
+
+układ powinien mieć podwyższoną stabilność cyklicznych stanów spinowych,
+
+przy odpowiednim napędzie może wejść w stan z topologicznie chronioną oscylacją (czasowy odpowiednik rezonansu strukturalnego).
