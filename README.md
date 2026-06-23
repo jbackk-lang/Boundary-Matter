@@ -65,3 +65,5 @@ Przykładowe wartości:
 - **125/215** — Te / Po  
 
 W rzeczywistych materiałach te proporcje
+
+![Struktura barków}(https://github.com/jbackk-lang/Boundary-Matter/blob/main/strukUzupel.png)
