@@ -1,3 +1,8 @@
+## 🔗 Wszystkie modele i repozytoria
+Pełna lista projektów znajduje się na stronie:
+https://jbackk-lang.github.io
+---
+
 # Boundary‑Matter — Conceptual Framework for Topological Stability
 
 **Boundary‑Matter** to część szerszego modelu Λ–τ–ρ,  
