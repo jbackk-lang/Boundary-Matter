@@ -66,4 +66,5 @@ Przykładowe wartości:
 
 W rzeczywistych materiałach te proporcje
 
-![Struktura barków}(https://github.com/jbackk-lang/Boundary-Matter/blob/main/strukUzupel.png)
+![Struktura brakujacych czasteczek](https://github.com/jbackk-lang/Boundary-Matter/blob/main/strukUzupel.png)
+
