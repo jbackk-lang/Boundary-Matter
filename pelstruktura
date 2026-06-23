@@ -1,0 +1,148 @@
+# Układy po helu — katalog strukturalny (Boundary‑Matter)
+
+Legenda:
+O   = komórka / helisa
+- = połączenie liniowe
+| = połączenie pionowe
+[X] = znana cząstka
+[?] = strukturalnie możliwe, brak klasycznego odpowiednika
+
+----------------------------------------
+# 1. Pierwszy obieg (maksimum: hel)
+
+[H]
+O
+
+[He]
+O=O
+----------------------------------------
+
+# 2. Drugi obieg — układy 3‑komórkowe
+
+[Li]
+O=O-O
+
+[?] (układ boczny)
+O
+ \
+  O=O
+----------------------------------------
+
+# 3. Układy 4‑komórkowe
+
+[Be]
+O=O
+| |
+O=O
+
+[?] (skręcony czworokąt)
+O-O
+|  \
+O---O
+----------------------------------------
+
+# 4. Układy 5‑komórkowe
+
+[B]
+O=O
+| |
+O=O-O
+
+[?] (pięciokomórkowy wachlarz)
+O=O
+|  \
+O---O
+ \
+  O
+----------------------------------------
+
+# 5. Układy 6‑komórkowe
+
+[C]
+O=O
+| |
+O=O
+| |
+O=O
+
+[?] (heksagonalny pierścień)
+O-O-O
+|   |
+O-O-O
+----------------------------------------
+
+# 6. Układy 7‑komórkowe
+
+[N]
+O=O
+| |
+O=O
+| |
+O=O-O
+
+[?] (7‑komórkowy „kwiat”)
+  O
+ / \
+O-O-O
+ \|/
+  O
+  |
+  O
+----------------------------------------
+
+# 7. Układy 8‑komórkowe
+
+[O]
+O=O
+| |
+O=O
+| |
+O=O
+| |
+O=O
+
+[?] (8‑komórkowy pierścień z rdzeniem)
+O-O-O-O
+|     |
+O-O-O-O
+----------------------------------------
+
+# 8. Układy 9‑komórkowe
+
+[F]
+O=O
+| |
+O=O
+| |
+O=O
+| |
+O=O-O
+
+[?] (9‑komórkowa gwiazda)
+   O
+ / | \
+O--O--O
+ \ | /
+   O
+   |
+   O
+----------------------------------------
+
+# 9. Układy 10‑komórkowe
+
+[Ne]
+O=O
+| |
+O=O
+| |
+O=O
+| |
+O=O
+| |
+O=O
+
+[?] (10‑komórkowy podwójny pierścień)
+O-O-O-O-O
+|       |
+O-O-O-O-O
+----------------------------------------
