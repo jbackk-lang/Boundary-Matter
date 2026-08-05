@@ -1,6 +1,4 @@
-## 🔗 Wszystkie modele i repozytoria
-Pełna lista projektów znajduje się na stronie:
-https://jbackk-lang.github.io
+WWW [https://github.com/jbackk-lang/jbackk-lang.github.io  ](https://jbackk-lang.github.io/)   
 ---
 # Boundary-Matter – TIMDR Framework
 
