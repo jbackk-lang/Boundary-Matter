@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-08-05T12:30:00",
+  "k": -0.75,
+  "metrics": {
+    "O": 0.458,
+    "P": 0.122,
+    "Z": 0.728,
+    "RSI_TRM": 55.6,
+    "WSF": 15.6,
+    "H": 0.44,
+    "A": 2.4
+  },
+  "theses": [
+    {
+      "id": 1,
+      "type": "kontratrendowa",
+      "statement": "Pomimo że rynek wykazuje umiarkowany optymizm (RSI_TRM = 55.6), struktura skrętu (k = -0.75) sugeruje możliwość nagłego impulsu spadkowego. Anomalia wolumenowa z dnia 51 (wolumen 3.2x średniej, zmienność 3.8%) może zdominować sentyment wzrostowy.",
+      "probability": 64,
+      "confidence": 82,
+      "action": "sprzedaj",
+      "entry": 127.0,
+      "stop_loss": 128.5,
+      "take_profit": 122.0,
+      "risk_reward": 0.3
+    },
+    {
+      "id": 2,
+      "type": "ambiwalentna",
+      "statement": "Rynek znajduje się w stanie zawieszenia (Z = 0.73), gdzie optymizm (O = 0.46) równoważy niski pesymizm (P = 0.12). Skręt (k = -0.75) wzmacnia obie możliwości. Przesunięcie fazowe +4.2 dnia sugeruje opóźnienie cyklu.",
+      "probability": 58,
+      "confidence": 79,
+      "action": "wstrzymaj się",
+      "entry": null,
+      "stop_loss": null,
+      "take_profit": null,
+      "risk_reward": null
+    },
+    {
+      "id": 3,
+      "type": "samospełniająca",
+      "statement": "Optymizm (O = 0.46) jest podtrzymywany przez anomalie (A = 2.4), które mogą sygnalizować zmęczenie rynku. Skręt działa jak szkło powiększające – każda nieprawidłowość staje się bardziej widoczna.",
+      "probability": 61,
+      "confidence": 81,
+      "action": "monitoruj",
+      "entry": null,
+      "stop_loss": null,
+      "take_profit": null,
+      "risk_reward": null
+    }
+  ],
+  "dominant": "ambiwalentna"
+}
