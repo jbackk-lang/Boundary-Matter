@@ -1,0 +1,22 @@
+{
+  "k_minus": -0.75,
+  "k_plus": 0.75,
+  "comparison": {
+    "RSI_TRM": { "k_minus": 55.6, "k_plus": 49.2, "difference": 6.4 },
+    "WSF": { "k_minus": 15.6, "k_plus": 12.1, "difference": 3.5 },
+    "O": { "k_minus": 0.458, "k_plus": 0.382, "difference": 0.076 },
+    "P": { "k_minus": 0.122, "k_plus": 0.198, "difference": -0.076 },
+    "Z": { "k_minus": 0.728, "k_plus": 0.710, "difference": 0.018 },
+    "delta_f": { "k_minus": 4.2, "k_plus": -3.8, "difference": 8.0 },
+    "delta_sigma": { "k_minus": 0.27, "k_plus": 0.19, "difference": 0.08 },
+    "delta_H": { "k_minus": 0.09, "k_plus": 0.07, "difference": 0.02 },
+    "delta_A": { "k_minus": 2.4, "k_plus": 1.8, "difference": 0.6 }
+  },
+  "qualitative_observations": {
+    "reaction_to_anomalies": "k_minus amplifies downward moves; k_plus amplifies upward moves",
+    "phase_shift": "k_minus delays cycles; k_plus accelerates cycles",
+    "recommendations": "k_minus more cautious; k_plus more aggressive",
+    "stability": "k_minus higher WSF; k_plus lower WSF",
+    "entropy": "k_minus slightly higher; k_plus slightly lower"
+  }
+}
