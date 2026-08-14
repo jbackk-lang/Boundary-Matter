@@ -8,7 +8,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 # ------------------- KONFIGURACJA -------------------
-DEFAULT_SYMBOL = "AAPL"
+DEFAULT_SYMBOL = "EURPLN=X"
 DEFAULT_PERIOD = "6mo"  # 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, max
 
 # ------------------- FUNKCJE GŁÓWNE -------------------
@@ -84,6 +84,6 @@ def fetch_alpha_vantage(symbol: str = DEFAULT_SYMBOL, api_key: str = None) -> di
 if __name__ == "__main__":
     # Test z yfinance
     print("Pobieranie danych z yfinance...")
-    data = fetch_yfinance("AAPL", "1mo")
+    data = fetch_yfinance("EURPLN=X", "1mo")
     print(f"Pobrano {len(data['close'])} dni dla {data['symbol']}")
     print("Ostatnie 5 zamknięć:", data['close'][-5:])

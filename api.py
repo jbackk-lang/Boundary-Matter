@@ -18,6 +18,8 @@ from datetime import datetime
 import uvicorn
 import numpy as np
 
+from timdr_market import TIMDRMarket, candles_from_ohlcv
+
 # ------------------ INICJALIZACJA ------------------
 app = FastAPI(
     title="TIMDR API – Boundary-Matter",
@@ -36,14 +38,18 @@ app.add_middleware(
 
 # ------------------ MODELE DANYCH ------------------
 class PredictRequest(BaseModel):
-    symbol: str = "AAPL"
+    symbol: str = "EURPLN=X"
     period: str = "6mo"
     k: float = -0.75
 
 class SignalRequest(BaseModel):
-    symbol: str = "AAPL"
+    symbol: str = "EURPLN=X"
     period: str = "1mo"
     k: float = -0.75
+
+class TimdrMarketRequest(BaseModel):
+    symbol: str = "EURPLN=X"
+    period: str = "6mo"
 
 # ------------------ FUNKCJE POMOCNICZE ------------------
 def fetch_yfinance(symbol: str, period: str) -> dict:
@@ -163,6 +169,54 @@ def generate_theses(data: dict, k: float) -> list:
     ]
     return theses
 
+def compute_timdr_market_signals(data: dict) -> dict:
+    """Liczy sygnaly TIMDRMarket (twist/anomalia wolumenu/trend/rytm) z
+    danych OHLCV zwroconych przez fetch_yfinance(). `candles_from_ohlcv()`
+    (timdr_market.py) jest mostem miedzy formatem slownik-list uzywanym
+    w tym pliku a tablica 2D, ktorej oczekuje TIMDRMarket - patrz jego
+    docstring co do konwencji kolumn (close=3, volume=4, t=5)."""
+    candles = candles_from_ohlcv(data)
+    market = TIMDRMarket()
+    dates = data["date"]
+
+    twist_idx, twist_z = market.twist_price(candles)
+    anomaly_idx, anomaly_z = market.anomaly_volume(candles)
+    slopes, _trend_z = market.trend_price(candles)
+    periods, beacon_score = market.rhythm_volume(candles)
+
+    def _points(idx, z, limit=5):
+        # tylko ostatnie `limit` sygnalow (chronologicznie najnowsze) -
+        # pelna tablica indeksow moze byc duza i malo czytelna w JSON
+        return [
+            {"date": dates[int(i)], "index": int(i), "z": round(float(z[int(i)]), 2)}
+            for i in idx[-limit:]
+        ]
+
+    if len(slopes):
+        last_slope = round(float(slopes[-1]), 4)
+        direction = "rosnący" if last_slope > 0 else ("malejący" if last_slope < 0 else "płaski")
+    else:
+        last_slope, direction = None, None
+
+    return {
+        "twist": {
+            "count": int(len(twist_idx)),
+            "recent": _points(twist_idx, twist_z),
+        },
+        "anomaly_volume": {
+            "count": int(len(anomaly_idx)),
+            "recent": _points(anomaly_idx, anomaly_z),
+        },
+        "trend": {
+            "current_slope": last_slope,
+            "direction": direction,
+        },
+        "rhythm_volume": {
+            "dominant_periods": [int(p) for p in periods],
+            "beacon_score": round(beacon_score, 3),
+        },
+    }
+
 # ------------------ ENDPOINTY ------------------
 @app.get("/")
 def root():
@@ -194,7 +248,14 @@ def predict(request: PredictRequest):
     
     theses = generate_theses(data, request.k)
     signal = generate_signal(close, request.k)
-    
+
+    try:
+        timdr_market = compute_timdr_market_signals(data)
+    except Exception as e:
+        # blad w nowym module nie powinien wywalac calego /predict -
+        # ten sam wzorzec co reszta endpointow w tym pliku
+        timdr_market = {"error": str(e)}
+
     return {
         "status": "success",
         "timestamp": datetime.now().isoformat(),
@@ -203,7 +264,8 @@ def predict(request: PredictRequest):
         "k": request.k,
         "metrics": metrics,
         "theses": theses,
-        "signal": signal
+        "signal": signal,
+        "timdr_market": timdr_market
     }
 
 @app.post("/signal")
@@ -235,6 +297,23 @@ def get_ohlcv(request: PredictRequest):
         "close": data["close"],
         "volume": data["volume"],
         "last_update": data["last_update"]
+    }
+
+@app.post("/timdr_market")
+def timdr_market_endpoint(request: TimdrMarketRequest):
+    """Sygnaly TIMDRMarket (twist ceny / anomalie wolumenu / trend / rytm
+    wolumenu) na danych OHLCV z Yahoo Finance - patrz timdr_market.py."""
+    data = fetch_yfinance(request.symbol, request.period)
+    try:
+        signals = compute_timdr_market_signals(data)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Błąd TIMDRMarket: {e}")
+
+    return {
+        "symbol": data["symbol"],
+        "period": data["period"],
+        "timestamp": datetime.now().isoformat(),
+        **signals,
     }
 
 # ------------------ URUCHOMIENIE ------------------

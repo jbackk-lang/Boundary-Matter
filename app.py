@@ -24,7 +24,7 @@ st.caption("Tryb: lewoskrętny (k = -0.75) | Dane rzeczywiste z Yahoo Finance pr
 with st.sidebar:
     st.header("⚙️ Konfiguracja")
     
-    symbol = st.text_input("Symbol giełdowy", value="AAPL").upper()
+    symbol = st.text_input("Symbol giełdowy", value="EURPLN=X").upper()
     period = st.selectbox(
         "Okres danych",
         options=["1mo", "3mo", "6mo", "1y", "2y", "5y"],
@@ -180,6 +180,53 @@ if data:
         else:
             st.warning(f"🟡 {signal['action']} – {signal['probability']}% (cena: ${signal['price']:.2f})")
     
+    st.divider()
+
+    # ------------------ TIMDR MARKET (twist/anomalia/trend/rytm) ------------------
+    # Sygnaly z timdr_market.py, dolaczone przez api.py do odpowiedzi /predict
+    # (klucz "timdr_market") - patrz compute_timdr_market_signals() w api.py.
+    tm = data.get("timdr_market")
+    if tm and "error" not in tm:
+        st.subheader("🌀 Sygnały TIMDR Market")
+        st.caption("Twist ceny (nagłe zmiany), anomalie wolumenu, trend lokalny, rytm wolumenu")
+
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Twist (nagłe zmiany ceny)", tm["twist"]["count"])
+        col2.metric("Anomalie wolumenu", tm["anomaly_volume"]["count"])
+
+        trend = tm["trend"]
+        if trend["direction"] == "rosnący":
+            col3.metric("Trend lokalny", "📈 rosnący", f"{trend['current_slope']}")
+        elif trend["direction"] == "malejący":
+            col3.metric("Trend lokalny", "📉 malejący", f"{trend['current_slope']}")
+        else:
+            col3.metric("Trend lokalny", "➖ płaski" if trend["direction"] else "b.d.")
+
+        rhythm = tm["rhythm_volume"]
+        if rhythm["dominant_periods"]:
+            st.info(
+                f"🔁 Wykryto okresowość wolumenu: co ~{', '.join(str(p) for p in rhythm['dominant_periods'])} "
+                f"świec (siła: {rhythm['beacon_score']:.2f})"
+            )
+
+        if tm["twist"]["recent"]:
+            with st.expander(f"Ostatnie sygnały twist ({tm['twist']['count']} łącznie)"):
+                for p in tm["twist"]["recent"]:
+                    st.write(f"**{p['date']}** — z={p['z']}")
+
+        if tm["anomaly_volume"]["recent"]:
+            with st.expander(f"Ostatnie anomalie wolumenu ({tm['anomaly_volume']['count']} łącznie)"):
+                for p in tm["anomaly_volume"]["recent"]:
+                    st.write(f"**{p['date']}** — z={p['z']}")
+
+        st.caption(
+            "⚠️ TIMDRMarket to sygnały statystyczne (MAD-zscore), nie prognoza - "
+            "punkty 'twist'/'anomalia' oznaczają że coś odbiegało od niedawnej normy, "
+            "nie że to sygnał kupna/sprzedaży."
+        )
+    elif tm and "error" in tm:
+        st.caption(f"⚠️ TIMDR Market: {tm['error']}")
+
     st.divider()
     st.caption(f"Ostatnia aktualizacja: {data.get('timestamp', 'b.d.')}")
 
